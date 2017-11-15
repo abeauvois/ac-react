@@ -18,8 +18,9 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root">toto</div>
+    <?php echo('php ready in syncccc!') ?>
+    <div id="root">:)</div>
     
-    <script src="http://localhost:3000/static/js/main.d8f07767.js"></script>
+    <script src="dist/bundle.js"></script>
   </body>
 </html>
