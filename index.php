@@ -18,8 +18,8 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="root">toto</div>
     
-    <script src="./cra/public/bundle.js"></script>
+    <script src="http://localhost:3000/static/js/main.d8f07767.js"></script>
   </body>
 </html>
