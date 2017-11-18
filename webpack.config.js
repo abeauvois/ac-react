@@ -1,3 +1,4 @@
+var FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const path = require('path');
@@ -15,6 +16,7 @@ module.exports = {
         ]
     },
     plugins: [
+        // new FlowBabelWebpackPlugin(),
         new BrowserSyncPlugin({
           // browse to http://localhost:3000/ during development, 
           // ./public directory is being served 
