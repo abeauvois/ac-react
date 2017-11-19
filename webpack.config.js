@@ -7,7 +7,9 @@ module.exports = {
     entry: "./src/app.js",
     output: {
         path: path.resolve('dist'),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        libraryTarget: 'umd',
+        library: '_spark'
     },
     watch: true,
     module: {

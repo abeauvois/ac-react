@@ -1,4 +1,9 @@
-_spark = {
+
+import React, { Component } from 'react'
+import ReactDom from 'react-dom'
+import { ACButton } from './assoconnect'
+
+const _spark = {
     template: {}
 };
 
@@ -81,25 +86,29 @@ _spark.template.button = function (id, text, options){
 	var button = $("<div>")
 		.attr("id", id + "Button")
 		// .addClass("button button" + options.color.ucfirst() + " button" + options.size.ucfirst() + " " + options.className)
-		.append(
-			// Icône
-			(function(options){
-				if(options.ico){
-					return _spark.template._gif("ico ico" + options.ico.ucfirst());
-				}
-			})(options),
-			// Texte
-			$("<span>").text(text)
-		);
-	if(options.link) {
-		return $("<a>")
-			.attr("href", options.link)
-			.attr("target", options.target)
-			.append(button);
-	}
-	else {
-		return button;
-	}
+		// .append(
+		// 	// Icône
+		// 	(function(options){
+		// 		if(options.ico){
+		// 			return _spark.template._gif("ico ico" + options.ico.ucfirst());
+		// 		}
+		// 	})(options),
+		// 	// Texte
+		// 	$("<span>").text(text)
+		// );
+	// if(options.link) {
+	// 	return $("<a>")
+	// 		.attr("href", options.link)
+	// 		.attr("target", options.target)
+	// 		.append(button);
+	// }
+	// else {
+	// 	return button;
+	// }
+	return ReactDom.render(
+		<ACButton label={text} ico="close"/>, 
+		document.getElementById(id)
+	)
 };
 
 /**
@@ -478,3 +487,5 @@ _spark.template.prompt = function (body, textarea, callback, prefill, ok, cancel
 			]
 		});
 };
+
+export default _spark
